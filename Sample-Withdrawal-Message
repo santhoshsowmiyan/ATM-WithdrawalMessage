@@ -1,0 +1,10 @@
+name= input('Name: ')
+wld_amt = int(input('Amount to be Wildrawn: '))
+Bank_name = input('Branch Name: ')
+avl_bal = 20000
+bal = avl_bal - wld_amt
+import pytz, datetime
+Indian_time = pytz.timezone('Asia/Kolkata')
+Time = datetime.datetime.now(Indian_time)
+Statement = ('''Dear {}. Your HDFC Bank Account has been debited with INR {} from {} branch ATM at {} and your Available Balance is {}'''.format(name,wld_amt,Bank_name,Time,bal))
+print (Statement)
